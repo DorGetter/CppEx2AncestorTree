@@ -1,5 +1,5 @@
 //
-// Created by dor on 15/04/2020.
+// Created by Dor Getter on 15/04/2020.
 //
 #define CHECK DOCTEST_CHECK
 
