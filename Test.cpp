@@ -4,7 +4,7 @@
 #define CHECK DOCTEST_CHECK
 
 #include "doctest.h"
-#include "FamilyTree.h"
+#include "FamilyTree.hpp"
 #include <string>
 using namespace family;
 

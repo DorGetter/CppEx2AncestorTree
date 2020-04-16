@@ -22,4 +22,3 @@ test: TestCounter.o Test.o $(STUDENT_OBJECTS)
 
 clean:
 	rm -f *.o demo test
-	

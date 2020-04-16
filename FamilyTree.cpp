@@ -2,7 +2,7 @@
 // Created by dor on 12/04/2020.
 //
 
-#include "FamilyTree.h"
+#include "FamilyTree.hpp"
 #include <iostream>
 #include <string>
 

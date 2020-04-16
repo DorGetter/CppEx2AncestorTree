@@ -1,6 +1,3 @@
-//
-// Created by dor on 15/04/2020.
-//
 
 #define DOCTEST_CONFIG_IMPLEMENT
 #include "doctest.h"
