@@ -6,7 +6,7 @@
 #pragma once
 #define COUNT 10
 
-
+namespace std; 
 namespace family{
 
 
