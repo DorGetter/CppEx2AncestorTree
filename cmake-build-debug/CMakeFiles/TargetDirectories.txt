@@ -1,0 +1,3 @@
+/home/dor/Desktop/task2_AncestorTree/Ancestor-Tree/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/dor/Desktop/task2_AncestorTree/Ancestor-Tree/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/dor/Desktop/task2_AncestorTree/Ancestor-Tree/cmake-build-debug/CMakeFiles/Ancestor_Tree.dir
