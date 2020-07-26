@@ -12,9 +12,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d55f4b09-d51a-4c9d-8627-589fd21501b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ancestor.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ancestor.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Demo.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyTree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyTree.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyTree.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyTree.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Ancestor_Tree" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Ancestor_Tree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ancestor_Tree.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ancestor_Tree.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ancestor_Tree.dir/Demo.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ancestor_Tree.dir/Demo.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ancestor_Tree.dir/FamilyTree.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Ancestor_Tree.dir/FamilyTree.cpp.o" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,11 +42,14 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunManager">
     <configuration name="Ancestor_Tree" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Ancestor_Tree" TARGET_NAME="Ancestor_Tree" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Ancestor_Tree" RUN_TARGET_NAME="Ancestor_Tree">
@@ -63,6 +73,10 @@
       <workItem from="1595525364123" duration="416000" />
       <workItem from="1595525784887" duration="104000" />
       <workItem from="1595532875614" duration="146000" />
+      <workItem from="1595597715300" duration="721000" />
+      <workItem from="1595601651353" duration="670000" />
+      <workItem from="1595606309423" duration="33000" />
+      <workItem from="1595711688485" duration="26576000" />
     </task>
     <servers />
   </component>
@@ -70,14 +84,46 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="733" y="343" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586975022472">
+    <state x="945" y="340" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595712247892">
       <screen x="38" y="0" width="1882" height="1080" />
     </state>
-    <state x="733" y="343" key="#com.intellij.fileTypes.FileTypeChooser/38.0.1882.1080@38.0.1882.1080" timestamp="1586975022472" />
-    <state x="762" y="296" key="FileChooserDialogImpl" timestamp="1595532896022">
+    <state x="945" y="340" key="#com.intellij.fileTypes.FileTypeChooser/38.0.1882.1080@38.0.1882.1080" timestamp="1595712247892" />
+    <state x="762" y="296" width="432" height="487" key="FileChooserDialogImpl" timestamp="1595606340154">
       <screen x="38" y="0" width="1882" height="1080" />
     </state>
-    <state x="762" y="296" key="FileChooserDialogImpl/38.0.1882.1080@38.0.1882.1080" timestamp="1595532896022" />
+    <state x="762" y="296" width="432" height="487" key="FileChooserDialogImpl/38.0.1882.1080@38.0.1882.1080" timestamp="1595606340154" />
+    <state width="1828" height="286" key="GridCell.Tab.0.bottom" timestamp="1595737377107">
+      <screen x="38" y="0" width="1882" height="1080" />
+    </state>
+    <state width="1828" height="286" key="GridCell.Tab.0.bottom/38.0.1882.1080@38.0.1882.1080" timestamp="1595737377107" />
+    <state width="1828" height="286" key="GridCell.Tab.0.center" timestamp="1595737377104">
+      <screen x="38" y="0" width="1882" height="1080" />
+    </state>
+    <state width="1828" height="286" key="GridCell.Tab.0.center/38.0.1882.1080@38.0.1882.1080" timestamp="1595737377104" />
+    <state width="1828" height="286" key="GridCell.Tab.0.left" timestamp="1595737377103">
+      <screen x="38" y="0" width="1882" height="1080" />
+    </state>
+    <state width="1828" height="286" key="GridCell.Tab.0.left/38.0.1882.1080@38.0.1882.1080" timestamp="1595737377103" />
+    <state width="1828" height="286" key="GridCell.Tab.0.right" timestamp="1595737377106">
+      <screen x="38" y="0" width="1882" height="1080" />
+    </state>
+    <state width="1828" height="286" key="GridCell.Tab.0.right/38.0.1882.1080@38.0.1882.1080" timestamp="1595737377106" />
+    <state width="1828" height="195" key="GridCell.Tab.1.bottom" timestamp="1595736647640">
+      <screen x="38" y="0" width="1882" height="1080" />
+    </state>
+    <state width="1828" height="195" key="GridCell.Tab.1.bottom/38.0.1882.1080@38.0.1882.1080" timestamp="1595736647640" />
+    <state width="1828" height="195" key="GridCell.Tab.1.center" timestamp="1595736647639">
+      <screen x="38" y="0" width="1882" height="1080" />
+    </state>
+    <state width="1828" height="195" key="GridCell.Tab.1.center/38.0.1882.1080@38.0.1882.1080" timestamp="1595736647639" />
+    <state width="1828" height="195" key="GridCell.Tab.1.left" timestamp="1595736647639">
+      <screen x="38" y="0" width="1882" height="1080" />
+    </state>
+    <state width="1828" height="195" key="GridCell.Tab.1.left/38.0.1882.1080@38.0.1882.1080" timestamp="1595736647639" />
+    <state width="1828" height="195" key="GridCell.Tab.1.right" timestamp="1595736647639">
+      <screen x="38" y="0" width="1882" height="1080" />
+    </state>
+    <state width="1828" height="195" key="GridCell.Tab.1.right/38.0.1882.1080@38.0.1882.1080" timestamp="1595736647639" />
     <state width="640" height="204" key="ImportCMakeProjectWizard.bottomPanel" timestamp="1595533020204">
       <screen x="38" y="0" width="1882" height="1080" />
     </state>
@@ -86,9 +132,24 @@
       <screen x="38" y="0" width="1882" height="1080" />
     </state>
     <state width="640" height="476" key="ImportCMakeProjectWizard.topPanel/38.0.1882.1080@38.0.1882.1080" timestamp="1595533020203" />
-    <state x="642" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1586967162201">
+    <state x="759" y="212" key="refactoring.ChangeSignatureDialog" timestamp="1595735826452">
       <screen x="38" y="0" width="1882" height="1080" />
     </state>
-    <state x="642" y="239" width="672" height="678" key="search.everywhere.popup/38.0.1882.1080@38.0.1882.1080" timestamp="1586967162201" />
+    <state x="759" y="212" key="refactoring.ChangeSignatureDialog/38.0.1882.1080@38.0.1882.1080" timestamp="1595735826452" />
+    <state x="642" y="183" width="672" height="678" key="search.everywhere.popup" timestamp="1595722582770">
+      <screen x="38" y="0" width="1882" height="1080" />
+    </state>
+    <state x="642" y="183" width="672" height="678" key="search.everywhere.popup/38.0.1882.1080@38.0.1882.1080" timestamp="1595722582770" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Demo.cpp</url>
+          <line>96</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

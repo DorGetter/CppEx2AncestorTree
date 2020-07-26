@@ -37,109 +37,109 @@ TEST_CASE("Initializing Tree Of The British Royal Family") {
 
     T.addMother("Queen Elizabeth 2", "Queen Elizabeth");
     T.addFather("Queen Elizabeth 2", "King George 6");
-    std::cout<< "\n\t\t///////////////////////////////////////\n\t\t//////   British Royal Family   //////\n\t\t/////////////////////////////////////\n" << std::endl; 
+    std::cout<< "\n\t\t///////////////////////////////////////\n\t\t//////   British Royal Family   //////\n\t\t/////////////////////////////////////\n" << std::endl;
     T.display();
-
+    
     /////////////////////////
     ////////Existence///////
     ///////////////////////
-    CHECK(T.root);
-    CHECK(T.root->Dad);
-    CHECK(T.root->Mom);
-    CHECK(T.root->Dad->Dad);
-    CHECK(T.root->Dad->Mom);
-    CHECK(T.root->Mom->Dad);
-    CHECK(T.root->Mom->Mom);
-    CHECK(T.root->Dad->Dad->Dad);
-    CHECK(T.root->Dad->Dad->Mom);
-    CHECK(T.root->Dad->Mom->Dad);
-    CHECK(T.root->Dad->Mom->Mom);
-    CHECK(T.root->Dad->Dad->Mom->Mom);
-    CHECK(T.root->Dad->Dad->Mom->Dad);
+            CHECK(T.get_root());
+            CHECK(T.get_root()->get_father());
+            CHECK(T.get_root()->get_mother());
+            CHECK(T.get_root()->get_father()->get_father());
+            CHECK(T.get_root()->get_father()->get_mother());
+            CHECK(T.get_root()->get_mother()->get_father());
+            CHECK(T.get_root()->get_mother()->get_mother());
+            CHECK(T.get_root()->get_father()->get_father()->get_father());
+            CHECK(T.get_root()->get_father()->get_father()->get_mother());
+            CHECK(T.get_root()->get_father()->get_mother()->get_father());
+            CHECK(T.get_root()->get_father()->get_mother()->get_mother());
+            CHECK(T.get_root()->get_father()->get_father()->get_mother()->get_mother());
+            CHECK(T.get_root()->get_father()->get_father()->get_mother()->get_father());
 
     /////////////////////////
     ////////Rightness///////
     ///////////////////////
-    CHECK(T.root->name == "Prince Louis");
-    CHECK(T.root->Dad->name == "Prince Williams");
-    CHECK(T.root->Mom->name == "Kate Middleton");
-    CHECK(T.root->Dad->Dad->name == "Prince Charles");
-    CHECK(T.root->Dad->Mom->name == "Princess Diana");
-    CHECK(T.root->Mom->Dad->name == "Micheal Middleton");
-    CHECK(T.root->Mom->Mom->name == "Carole Middleton");
-    CHECK(T.root->Dad->Dad->Dad->name == "King philip");
-    CHECK(T.root->Dad->Dad->Mom->name == "Queen Elizabeth 2");
-    CHECK(T.root->Dad->Mom->Dad->name == "John Spencer");
-    CHECK(T.root->Dad->Mom->Mom->name == "Frances Shand Kydd");
-    CHECK(T.root->Dad->Dad->Mom->Mom->name == "Queen Elizabeth");
-    CHECK(T.root->Dad->Dad->Mom->Dad->name == "King George 6");
+            CHECK(T.get_root()->get_name() == "Prince Louis");
+            CHECK(T.get_root()->get_father()->get_name() == "Prince Williams");
+            CHECK(T.get_root()->get_mother()->get_name() == "Kate Middleton");
+            CHECK(T.get_root()->get_father()->get_father()->get_name() == "Prince Charles");
+            CHECK(T.get_root()->get_father()->get_mother()->get_name() == "Princess Diana");
+            CHECK(T.get_root()->get_mother()->get_father()->get_name() == "Micheal Middleton");
+            CHECK(T.get_root()->get_mother()->get_mother()->get_name() == "Carole Middleton");
+            CHECK(T.get_root()->get_father()->get_father()->get_father()->get_name() == "King philip");
+            CHECK(T.get_root()->get_father()->get_father()->get_mother()->get_name() == "Queen Elizabeth 2");
+            CHECK(T.get_root()->get_father()->get_mother()->get_father()->get_name() == "John Spencer");
+            CHECK(T.get_root()->get_father()->get_mother()->get_mother()->get_name() == "Frances Shand Kydd");
+            CHECK(T.get_root()->get_father()->get_father()->get_mother()->get_mother()->get_name() == "Queen Elizabeth");
+            CHECK(T.get_root()->get_father()->get_father()->get_mother()->get_father()->get_name() == "King George 6");
 
     /////////////////////////
     ////////relations///////
     ///////////////////////
-    CHECK(T.relation("Prince Louis")=="Me");
-    CHECK(T.relation("Prince Williams")=="father");
-    CHECK(T.relation("Kate Middleton")=="mother");
-    CHECK(T.relation("Prince Charles")=="grandfather");
-    CHECK(T.relation("Princess Diana")=="grandmother");
-    CHECK(T.relation("Micheal Middleton")=="grandfather");
-    CHECK(T.relation("Carole Middleton")=="grandmother");
-    CHECK(T.relation("King philip")=="great-grandfather");
-    CHECK(T.relation("Queen Elizabeth 2")=="great-grandmother");
-    CHECK(T.relation("John Spencer")=="great-grandfather");
-    CHECK(T.relation("Frances Shand Kydd")=="great-grandmother");
-    CHECK(T.relation("Queen Elizabeth")=="great-great-grandmother");
-    CHECK(T.relation("King George 6")=="great-great-grandfather");
+            CHECK(T.relation("Prince Louis")=="me");
+            CHECK(T.relation("Prince Williams")=="father");
+            CHECK(T.relation("Kate Middleton")=="mother");
+            CHECK(T.relation("Prince Charles")=="grandfather");
+            CHECK(T.relation("Princess Diana")=="grandmother");
+            CHECK(T.relation("Micheal Middleton")=="grandfather");
+            CHECK(T.relation("Carole Middleton")=="grandmother");
+            CHECK(T.relation("King philip")=="great-grandfather");
+            CHECK(T.relation("Queen Elizabeth 2")=="great-grandmother");
+            CHECK(T.relation("John Spencer")=="great-grandfather");
+            CHECK(T.relation("Frances Shand Kydd")=="great-grandmother");
+            CHECK(T.relation("Queen Elizabeth")=="great-great-grandmother");
+            CHECK(T.relation("King George 6")=="great-great-grandfather");
 
-    CHECK(T.relation("Squirtel")=="unrelated");
-    CHECK(T.relation("Charizard")=="unrelated");
-    CHECK(T.relation("John Smith")=="unrelated");
-    CHECK(T.relation("captain Jack Sparrow")=="unrelated");
+            CHECK(T.relation("Squirtel")=="unrelated");
+            CHECK(T.relation("Charizard")=="unrelated");
+            CHECK(T.relation("John Smith")=="unrelated");
+            CHECK(T.relation("captain Jack Sparrow")=="unrelated");
 
     /////////////////////////
     /////////find///////////
     ///////////////////////
-    CHECK(T.find("Me")=="Prince Louis");
-    CHECK(T.find("father")=="Prince Williams");
-    CHECK(T.find("mother")=="Kate Middleton");
-    CHECK(T.find("grandfather")=="Prince CharlesMicheal Middleton");
-    CHECK(T.find("grandmother")=="Princess DianaCarole Middleton");
-    CHECK(T.find("great-grandfather")=="King philipJohn Spencer");
-    CHECK(T.find("great-grandmother")=="Queen Elizabeth 2Frances Shand Kydd");
-    CHECK(T.find("great-great-grandfather")=="King George 6");
-    CHECK(T.find("great-great-grandmother")=="Queen Elizabeth");
+            CHECK(T.find("me")=="Prince Louis");
+            CHECK(T.find("father")=="Prince Williams");
+            CHECK(T.find("mother")=="Kate Middleton");
+            CHECK(T.find("grandfather")=="Prince Charles");
+            CHECK(T.find("grandmother")=="Princess Diana");
+            CHECK(T.find("great-grandfather")=="King philip");
+            CHECK(T.find("great-grandmother")=="Queen Elizabeth 2");
+            CHECK(T.find("great-great-grandfather")=="King George 6");
+            CHECK(T.find("great-great-grandmother")=="Queen Elizabeth");
 
     /////////////////////////
     ////Throw exception/////
     ///////////////////////
-    CHECK_THROWS(T.find("daddy"));
-    CHECK_THROWS(T.find("mommy"));
-    CHECK_THROWS(T.find("uncle"));
-    CHECK_THROWS(T.find("brother"));
-    CHECK_THROWS(T.find("sister"));
-    CHECK_THROWS(T.find("nephew"));
-    CHECK_THROWS(T.find("sibling"));
+            CHECK_THROWS(T.find("get_father()dy"));
+            CHECK_THROWS(T.find("get_mother()my"));
+            CHECK_THROWS(T.find("uncle"));
+            CHECK_THROWS(T.find("brother"));
+            CHECK_THROWS(T.find("sister"));
+            CHECK_THROWS(T.find("nephew"));
+            CHECK_THROWS(T.find("sibling"));
 
     ///////////////////////////
     /////Remove From Tree/////
     /////////////////////////
 
     T.remove("Prince Charles");
-    CHECK(T.relation("Queen Elizabeth")=="unrelated");
-    CHECK(T.relation("King George 6")=="unrelated");
-    CHECK(T.relation("King philip")=="unrelated");
-    CHECK(T.relation("Queen Elizabet 2")=="unrelated");
-    CHECK(T.relation("Prince Charles")=="unrelated");
-    CHECK(T.relation("Prince Williams")=="father");
+            CHECK(T.relation("Queen Elizabeth")=="unrelated");
+            CHECK(T.relation("King George 6")=="unrelated");
+            CHECK(T.relation("King philip")=="unrelated");
+            CHECK(T.relation("Queen Elizabet 2")=="unrelated");
+            CHECK(T.relation("Prince Charles")=="unrelated");
+            CHECK(T.relation("Prince Williams")=="father");
 
     //////////////////////////////////////////////////////////////////////////////
     ////////////////////////////New Tree- LION KING//////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
-  
-      std::cout<< "\n\t\t///////////////////////////////////////\n\t\t////////   Lion King Family   ////////\n\t\t/////////////////////////////////////\n" << std::endl; 
-   
+
+    std::cout<< "\n\t\t///////////////////////////////////////\n\t\t////////   Lion King Family   ////////\n\t\t/////////////////////////////////////\n" << std::endl;
+
     family::Tree L("Kiara");
-     L.addFather("Kiara", "Simba")   // Tells the tree that the father of Louis is Williams.
+    L.addFather("Kiara", "Simba")   // Tells the tree that the father of Louis is Williams.
             .addMother("Kiara", "Nala");  // Tells the tree that the mother of Louis is Kate.
 
     L.addFather("Simba", "Mufasa");
@@ -160,78 +160,78 @@ TEST_CASE("Initializing Tree Of The British Royal Family") {
     /////////////////////////
     ////////Existence///////
     ///////////////////////
-    CHECK(L.root);
-    CHECK(L.root->Dad);
-    CHECK(L.root->Mom);
-    CHECK(L.root->Dad->Dad);
-    CHECK(L.root->Dad->Mom);
-    CHECK(L.root->Mom->Dad);
-    CHECK(L.root->Mom->Mom);
-    CHECK(L.root->Dad->Dad->Dad);
-    CHECK(L.root->Dad->Dad->Mom);
+            CHECK(L.get_root());
+            CHECK(L.get_root()->get_father());
+            CHECK(L.get_root()->get_mother());
+            CHECK(L.get_root()->get_father()->get_father());
+            CHECK(L.get_root()->get_father()->get_mother());
+            CHECK(L.get_root()->get_mother()->get_father());
+            CHECK(L.get_root()->get_mother()->get_mother());
+            CHECK(L.get_root()->get_father()->get_father()->get_father());
+            CHECK(L.get_root()->get_father()->get_father()->get_mother());
 
 
 
     /////////////////////////
     ////////Rightness///////
     ///////////////////////
-    CHECK(L.root->name == "Kiara");
-    CHECK(L.root->Dad->name == "Simba");
-    CHECK(L.root->Mom->name == "Nala");
-    CHECK(L.root->Dad->Dad->name == "Mufasa");
-    CHECK(L.root->Dad->Mom->name == "Sarabi");
-    CHECK(L.root->Mom->Dad->name == "Unknown");
-    CHECK(L.root->Mom->Mom->name == "Sarafina");
-    CHECK(L.root->Dad->Dad->Dad->name == "Ahadi");
-    CHECK(L.root->Dad->Dad->Mom->name == "Ura");
+            CHECK(L.get_root()->get_name() == "Kiara");
+            CHECK(L.get_root()->get_father()->get_name() == "Simba");
+            CHECK(L.get_root()->get_mother()->get_name() == "Nala");
+            CHECK(L.get_root()->get_father()->get_father()->get_name() == "Mufasa");
+            CHECK(L.get_root()->get_father()->get_mother()->get_name() == "Sarabi");
+            CHECK(L.get_root()->get_mother()->get_father()->get_name() == "Unknown");
+            CHECK(L.get_root()->get_mother()->get_mother()->get_name() == "Sarafina");
+            CHECK(L.get_root()->get_father()->get_father()->get_father()->get_name() == "Ahadi");
+            CHECK(L.get_root()->get_father()->get_father()->get_mother()->get_name() == "Ura");
 
-    CHECK(L.root->Dad->Dad->Dad->Mom->name == "Unknown2");
-    CHECK(L.root->Dad->Dad->Dad->Dad->name == "Mohatu");
+            CHECK(L.get_root()->get_father()->get_father()->get_father()->get_mother()->get_name() == "Unknown2");
+            CHECK(L.get_root()->get_father()->get_father()->get_father()->get_father()->get_name() == "Mohatu");
 
     /////////////////////////
     ////////relations///////
     ///////////////////////
-    CHECK(L.relation("Kiara")=="Me");
-    CHECK(L.relation("Simba")=="father");
-    CHECK(L.relation("Nala")=="mother");
-    CHECK(L.relation("Mufasa")=="grandfather");
-    CHECK(L.relation("Sarabi")=="grandmother");
-    CHECK(L.relation("Sarafina")=="grandmother");
-    CHECK(L.relation("Unknown")=="grandfather");
-    CHECK(L.relation("Ahadi")=="great-grandfather");
-    CHECK(L.relation("Ura")=="great-grandmother");
-    CHECK(L.relation("Mohatu")=="great-great-grandfather");
-    CHECK(L.relation("Unknown2")=="great-great-grandmother");
+            CHECK(L.relation("Kiara")=="me");
+            CHECK(L.relation("Simba")=="father");
+            CHECK(L.relation("Nala")=="mother");
+            CHECK(L.relation("Mufasa")=="grandfather");
+            CHECK(L.relation("Sarabi")=="grandmother");
+            CHECK(L.relation("Sarafina")=="grandmother");
+            CHECK(L.relation("Unknown")=="grandfather");
+            CHECK(L.relation("Ahadi")=="great-grandfather");
+            CHECK(L.relation("Ura")=="great-grandmother");
+            CHECK(L.relation("Mohatu")=="great-great-grandfather");
+            CHECK(L.relation("Unknown2")=="great-great-grandmother");
 
-    CHECK(L.relation("Scar")=="unrelated");
-    CHECK(L.relation("Zira")=="unrelated");
-    CHECK(L.relation("Kova")=="unrelated");
+            CHECK(L.relation("Scar")=="unrelated");
+            CHECK(L.relation("Zira")=="unrelated");
+            CHECK(L.relation("Kova")=="unrelated");
 
 
     /////////////////////////
     ////Throw exception/////
     ///////////////////////
-    CHECK_THROWS(L.find("daddy"));
-    CHECK_THROWS(L.find("mommy"));
-    CHECK_THROWS(L.find("uncle"));
-    CHECK_THROWS(L.find("brother"));
-    CHECK_THROWS(L.find("sister"));
-    CHECK_THROWS(L.find("nephew"));
-    CHECK_THROWS(L.find("KITTEN"));
+            CHECK_THROWS(L.find("fatheeer"));
+            CHECK_THROWS(L.find("mfatherotherer"));
+            CHECK_THROWS(L.find("uncqwele"));
+            CHECK_THROWS(L.find("brother"));
+            CHECK_THROWS(L.find("sister"));
+            CHECK_THROWS(L.find("nephew"));
+            CHECK_THROWS(L.find("KITTEN"));
 
     /////////////////////////
     /////////find///////////
     ///////////////////////
 
-    CHECK(L.find("Me")=="Kiara");
-    CHECK(L.find("father")=="Simba");
-    CHECK(L.find("mother")=="Nala");
-    CHECK(L.find("grandfather")=="MufasaUnknown");
-    CHECK(L.find("grandmother")=="SarabiSarafina");
-    CHECK(L.find("great-grandfather")=="Ahadi");
-    CHECK(L.find("great-grandmother")=="Ura");
-    CHECK(L.find("great-great-grandfather")=="Mohatu");
-    CHECK(L.find("great-great-grandmother")=="Unknown2");
+            CHECK(L.find("me")=="Kiara");
+            CHECK(L.find("father")=="Simba");
+            CHECK(L.find("mother")=="Nala");
+            CHECK(L.find("grandfather")=="Mufasa");
+            CHECK(L.find("grandmother")=="Sarabi");
+            CHECK(L.find("great-grandfather")=="Ahadi");
+            CHECK(L.find("great-grandmother")=="Ura");
+            CHECK(L.find("great-great-grandfather")=="Mohatu");
+            CHECK(L.find("great-great-grandmother")=="Unknown2");
 
 
     //////////////////////////
@@ -239,12 +239,10 @@ TEST_CASE("Initializing Tree Of The British Royal Family") {
     /////////////////////////
 
     L.remove("Mufasa");
-    CHECK(T.relation("Mufasa")=="unrelated");
-    CHECK(T.relation("Ahadi")=="unrelated");
-    CHECK(T.relation("Ura")=="unrelated");
-    CHECK(T.relation("Mohatu")=="unrelated");
-    CHECK(T.relation("Unknown2")=="unrelated");
+            CHECK(T.relation("Mufasa")=="unrelated");
+            CHECK(T.relation("Ahadi")=="unrelated");
+            CHECK(T.relation("Ura")=="unrelated");
+            CHECK(T.relation("Mohatu")=="unrelated");
+            CHECK(T.relation("Unknown2")=="unrelated");
 }
-
-
 

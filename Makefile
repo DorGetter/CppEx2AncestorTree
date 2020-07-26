@@ -1,24 +1,23 @@
 #!make -f
 
 CXX=clang++-9 
-CXXFLAGS=-std=c++2a
+CXXFLAGS=-std=c++2a -Wall -g
 
 HEADERS := $(wildcard *.h*)
-TEACHER_SOURCES := Demo.cpp TestCounter.cpp Test.cpp
-STUDENT_SOURCES := $(filter-out $(TEACHER_SOURCES), $(wildcard *.cpp))
+STUDENT_SOURCES := $(filter-out $(wildcard Test*.cpp), $(wildcard *.cpp))
 STUDENT_OBJECTS := $(subst .cpp,.o,$(STUDENT_SOURCES))
 
-run: demo
+run: test
 	./$^
 
-demo: Demo.o $(STUDENT_OBJECTS)
-	$(CXX) $(CXXFLAGS) $^ -o demo
+#test: TestRunner.o Test.o Test_ariel.o Test_hila.o $(STUDENT_OBJECTS)
+#	$(CXX) $(CXXFLAGS) $^ -o test
 
-test: TestCounter.o Test.o $(STUDENT_OBJECTS)
+test: TestRunner.o Test.o Test_hila.cpp Test_ariel.o $(STUDENT_OBJECTS)
 	$(CXX) $(CXXFLAGS) $^ -o test
 
 %.o: %.cpp $(HEADERS)
 	$(CXX) $(CXXFLAGS) --compile $< -o $@
 
 clean:
-	rm -f *.o demo test
+	rm -f *.o test
